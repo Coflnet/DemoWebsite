@@ -11,7 +11,7 @@ const uploadFile = async () => {
     formData.append('file', file.value)
 
     try {
-      const response = await axios.post('http://localhost:5159/api/excel', formData, {
+      const response = await axios.post('https://demo.coflnet.com/api/excel', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
