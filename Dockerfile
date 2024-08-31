@@ -5,7 +5,7 @@ RUN npm i -g pnpm
 FROM base as builder
 WORKDIR /app
 
-COPY ./package.json ./yarn.lock ./
+COPY ./package.json ./pnpm-lock.yaml ./
 
 RUN rm -rf node_modules && pnpm install --frozen-lockfile
 
