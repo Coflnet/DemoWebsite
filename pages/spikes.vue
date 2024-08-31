@@ -86,9 +86,9 @@ const uploadFile = async () => {
         </v-row>
       </v-card>
 
-      <v-card class="pa-5 mb-3 py-8" title="Erkannte Unternehmen">
+      <v-card class="pa-5 mb-3 py-8" title="Erkannte Unternehmen" v-if="brands">
         <v-row>
-          <v-col v-if="brands">
+          <v-col>
             <v-data-table :loading="isLoading" hover :items="brands" items-per-page="20"
                           density="compact"
                           :headers="[{ key: 'brand', title: 'Brand' }]">
@@ -97,9 +97,9 @@ const uploadFile = async () => {
         </v-row>
       </v-card>
 
-      <v-card class="py-16 pa-5 mb-3 " title="Keine Änderungen notwendig">
+      <v-card class="py-16 pa-5 mb-3 " title="Keine Änderungen notwendig" v-if="noChangeNecessary">
         <v-row>
-          <v-col v-if="noChangeNecessary">
+          <v-col>
             <v-data-table :loading="isLoading" hover :items="noChangeNecessary" items-per-page="20"
                           density="compact"
                           :headers="[{ key: 'input', title: 'Eingabwert aus Excel' }, { key: 'output', title: 'Ausgabewert' }]">
@@ -108,9 +108,9 @@ const uploadFile = async () => {
         </v-row>
       </v-card>
 
-      <v-card class="pa-5 mb-3 py-16">
+      <v-card class="pa-5 mb-3 py-16" v-if="mapped">
         <v-row>
-          <v-col v-if="mapped" title="Änderungen wurden durchgeführt">
+          <v-col title="Änderungen wurden durchgeführt">
             <v-data-table :loading="isLoading" hover :items="mapped" items-per-page="20"
                           density="compact"
                           :headers="[{ key: 'inputBrand', title: 'Eingabwert des Unternehmens aus Excel' }, { key: 'inputProduct', title: 'Eingabewert des Produkts aus Excel'} , { key: 'output', title: 'Ausgabewert' }]">
@@ -119,9 +119,9 @@ const uploadFile = async () => {
         </v-row>
       </v-card>
 
-      <v-card class="pa-5 mb-3 py-16" title="Keine Änderung möglich">
+      <v-card class="pa-5 mb-3 py-16" title="Keine Änderung möglich" v-if="unmappable">
         <v-row>
-          <v-col v-if="unmappable">
+          <v-col>
             <v-data-table :loading="isLoading" hover :items="unmappable" items-per-page="20"
                           density="compact"
                           :headers="[{ key: 'inputBrand', title: 'Eingabwert des Unternehmens aus Excel' }, { key: 'inputProduct', title: 'Eingabewert des Produkts aus Excel'} , { key: 'output', title: 'Ausgabewert' }]">
