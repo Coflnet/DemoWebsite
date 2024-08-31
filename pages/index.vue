@@ -11,10 +11,11 @@
           v-model="toggle_one"
           shaped
       >
-        <v-btn>
-
-          <NuxtLink to="/spikes">Spikes Demo</NuxtLink>
-        </v-btn>
+        <NuxtLink to="/spikes">
+          <v-btn>
+            Spikes Demo
+          </v-btn>
+        </NuxtLink>
 
         <!--
         For more demo applications use a normal a link, if the website is not in this nuxt application
