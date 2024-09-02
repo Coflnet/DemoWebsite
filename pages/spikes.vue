@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import BrandList from "~/components/brand-list.vue";
 import Survery from "~/components/survery.vue";
+import GenerateSurveys from "~/components/generate-surveys.vue";
 </script>
 
 <template>
@@ -10,6 +11,7 @@ import Survery from "~/components/survery.vue";
 
   <BrandList />
   <Survery />
+  <GenerateSurveys />
 </template>
 
 <style scoped>
