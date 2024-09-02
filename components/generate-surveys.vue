@@ -24,7 +24,7 @@ const uploadFile = async () => {
         const formData = new FormData()
         formData.append('file', file.value)
 
-        let res = await fetch(`http://localhost:5159/api/import/generateExcel/${count.value}`, {
+        let res = await fetch(`https://demo.coflnet.com/api/import/generateExcel/${count.value}`, {
           method: 'POST',
           body: formData,
         });
