@@ -15,7 +15,7 @@ const uploadFile = async () => {
 
     try {
       isLoading.value = true;
-      const response = await axios.post('http://localhost:5159/api/import', formData, {
+      const response = await axios.post('https://demo.coflnet.com/api/import', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
