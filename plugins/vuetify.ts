@@ -3,7 +3,7 @@ import '@mdi/font/css/materialdesignicons.css'
 
 import 'vuetify/styles'
 import { createVuetify } from 'vuetify'
-import {VNumberInput} from "vuetify/labs/components";
+import {VNumberInput} from "vuetify/components";
 
 export default defineNuxtPlugin((app) => {
     const vuetify = createVuetify({
